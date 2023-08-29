@@ -20,7 +20,7 @@ const galleryElements = galleryItems
   })
   .join("");
 
-galleryList.innerHTML = galleryElements;
+galleryList.insertAdjacentHTML("beforeend", galleryElements);
 
 galleryList.addEventListener("click", selectImage);
 
