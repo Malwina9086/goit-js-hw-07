@@ -20,4 +20,11 @@ const lightbox = new SimpleLightbox(".gallery a", {
   captionPosition: "bottom",
   captionDelay: 250,
 });
-gallery.on("show.simplelightbox");
+
+lightbox.on("show.simplelightbox", () => {
+  document.body.style.overflow = "hidden";
+});
+
+lightbox.on("close.simplelightbox", () => {
+  document.body.style.overflow = "auto";
+});
